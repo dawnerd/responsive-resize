@@ -6,11 +6,16 @@ Helper to manage media queries in javascript.
 ### Usage:
 
 ```javascript
-  ResponsiveResize.register("(max-width: 1000px)", function(){
-    console.log('entering 1000');
-    document.body.style.backgroundColor = 'blue'
-  }, function(){
-    console.log('exiting 1000');
-    document.body.style.backgroundColor = 'purple'
+  ResponsiveResize.register({
+    name: 'homepage',
+    selector: "(max-width: 1000px)",
+    enter: function(){
+      console.log('entering 1000');
+      document.body.style.backgroundColor = 'blue'
+    },
+    exit: function(){
+      console.log('exiting 1000');
+      document.body.style.backgroundColor = 'purple'
+    }
   });
 ```

@@ -1,6 +1,6 @@
 {
   "name": "responsive-resize",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Management class for javascript based media queries.",
   "main": "index.js",
   "scripts": {

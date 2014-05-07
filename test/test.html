@@ -13,29 +13,19 @@
     document.getElementById('width').innerHTML = window.outerWidth;
   }
 
-  ResponsiveResize.register("(max-width: 1000px)", function(){
-    console.log('entering 1000');
-    document.body.style.backgroundColor = 'blue'
-  }, function(){
-    console.log('exiting 1000');
-    document.body.style.backgroundColor = 'purple'
+  ResponsiveResize.register({
+    name: 'homepage',
+    selector: "(max-width: 1000px)",
+    enter: function(){
+      console.log('entering 1000');
+      document.body.style.backgroundColor = 'blue'
+    },
+    exit: function(){
+      console.log('exiting 1000');
+      document.body.style.backgroundColor = 'purple'
+    }
   });
 
-  ResponsiveResize.register("(min-width: 1001px) and (max-width: 1500px)", function(){
-    console.log('entering 1001');
-    document.body.style.backgroundColor = 'green'
-  }, function(){
-    console.log('exiting 1001');
-    document.body.style.backgroundColor = 'yellow'
-  });
-
-  ResponsiveResize.register("(min-width: 1501px)", function(){
-    console.log('entering 1501');
-    document.body.style.backgroundColor = 'white'
-  }, function(){
-    console.log('exiting 1501');
-    document.body.style.backgroundColor = 'pink'
-  });
 </script>
 </body>
 </html>
